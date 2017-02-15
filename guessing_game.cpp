@@ -1,13 +1,20 @@
+// Starts the preprocessor command including the contents of iostream
 #inclue <iostream>
 
+// This eliminates the need to write std::cout so it can just be cout
 using namespace std;
 
+/* I've looked up and heard void main () is considered in bad practice? 
+Still not completely understanding why though */
 void main ()
 {
 	// Delcaration of variables
-	int firstNumber, secondNumber, thirdNumber;
+	int firstNumber, secondNumber, thirdNumber, average, guess;
+	// Takes a single character as a response
+	char response;
 
-	int average;
+	// Calcualtes the average
+	average = (firstNumber + secondNumber + thirdNumber) / 3;
 
     // Input/Output for each number
 	cout << "Enter the 1st Nnmber";
@@ -19,30 +26,35 @@ void main ()
 	cout << "Enter the 3rd number";
 	cin >> "thirdNumber";
 
-	cout >> "Would you like to guess the average?";
+	cout << "Would you like to guess the average?";
+	cin >> response;
 
-	average = (firstNumber + secondNumber + thirdNumber) / 3;
-
-	// Start of if statement to calculate if guess is correct
-	if (cin >> "y")
+	// If statement for user inputting y, n, or something invalid
+	if (response == 'y')
 	{
 		cout << "What's your guess?";
-		cin >> "averageGuess";
-		
-		switch ("averageGuess")
+		cin >> "guess";
+		// Another if statement within the main one to check if the guess is correct
+		if (guess == average)
 		{
-			case 7:
-			cout << "How did you do that? You must be a robot.";
-			break;
-
-			default:
-			cout << "Wrong. Try again!"
-			break;
+			cout << "How did you guess that? You must be a robot.";
+		}
+		else
+		{
+			cout << "Actually it's" << average;
 		}
 	}
-	else if (cin >> "n")
+	else if (response == 'n')
 	{
-		cout << "The average is 7";
+		cout << "The average is" << average;
 	}
-
+	else
+	{
+		cout << "Invalid input. The average is" << average;
+	}
+	// Ends the program once the game is over
+	return 0;
 }
+
+/* Bug notes
+- Accidentally wrote comments wrong which commented things out

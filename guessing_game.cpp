@@ -29,7 +29,7 @@ void main ()
 	cout << "Would you like to guess the average?";
 	cin >> response;
 
-	// If statement for user inputting y, n, or something invalid
+	// If statement for user inputting y
 	if (response == 'y')
 	{
 		cout << "What's your guess?";
@@ -37,20 +37,22 @@ void main ()
 		// Another if statement within the main one to check if the guess is correct
 		if (guess == average)
 		{
-			cout << "How did you guess that? You must be a robot.";
+			cout << "That's mathematical! You're correct!";
 		}
+		// Else statement which give the correct answer if user's guess is incorrect
 		else
 		{
 			cout << "Actually it's" << average;
 		}
 	}
+	// Else if statement for if the user inputs n
 	else if (response == 'n')
 	{
 		cout << "The average is" << average;
 	}
 	else
 	{
-		cout << "Invalid input. The average is" << average;
+		cout << "That's not y or n, but the average is actually" << average;
 	}
 	// Ends the program once the game is over
 	return 0;

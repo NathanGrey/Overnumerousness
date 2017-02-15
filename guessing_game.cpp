@@ -23,7 +23,7 @@ void main ()
 	cout << "Enter the 2nd number";
 	cin >> "secondNumber";
 
-	cout << "Enter the 3rd number";
+	cout << "Enter the 3rd number4";
 	cin >> "thirdNumber";
 
 	cout << "Would you like to guess the average?";

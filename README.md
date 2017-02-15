@@ -1,5 +1,5 @@
 # Overnumerousness
-Description
+Description:
 You will be writing an interactive program which computes the average of three numbers. You'll use Visual Studio to create a new project, as well as Visual Studio to code, edit, and build this assignment.
 
 Requirements:

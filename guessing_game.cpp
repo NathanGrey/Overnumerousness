@@ -48,7 +48,7 @@ void main()
 	// Else if statement for if the user inputs n
 	else if (response == 'n')
 	{
-		cout << "The average is \n" << average;
+		cout << "The average is" << " " << average << "." << "\n";
 	}
 	else
 	{
